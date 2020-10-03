@@ -21,7 +21,7 @@ button_clicked=False
 
 
 #messages in the first screen
-welcome=Label(start_screen,text="WELCOME TO THE AMAZEING GAME",font=40)
+welcome=Label(start_screen,text="WELCOME TO THE MAZE GAME",font=40)
 welcome.grid(row=0,column=0,columnspan=2,padx=55)
 
 inst_header=Label(start_screen,text="INSTRUCTIONS:",font=20)

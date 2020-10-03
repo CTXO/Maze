@@ -55,12 +55,6 @@ class Maze(object):
           "                                               \n" + \
           "                                                 \n" + \
           "                                                \n" + \
-          "                                                  \n" + \
-          "                                                   \n" + \
-          "                                                    \n" +\
-    "                                                          \n" + \
-    "                                                             \n" + \
-    "                                                                 \n" + \
      "                                                                \n"
     mazes = [maze1,maze2,maze3]
     # Boolean values to check player status
@@ -222,9 +216,9 @@ class MazeGUI(Maze):
         count = 0
         tag_count = 0
         self.f_ball_index=self.ball_index
-        self.cmoves=self.moves
+        self.cmoves = self.moves
         self.canvas.create_text(200, 10, text=f"Level {self.maze_num}",font=20)
-        self.canvas.create_text(345, 205, text=f"{self.cmoves} moves left", tags="moves")
+        self.canvas.create_text(345, 225, text=f"{self.cmoves} moves left", tags="moves")
         for i in self.each_char:
 
             self.canvas.create_rectangle(self.initx + count * 10, self.inity +
@@ -244,7 +238,7 @@ class MazeGUI(Maze):
                 self.first_ball_tag=f"char{tag_count}"
             tag_count += 1
 
-        if maze_num==3:
+        if maze_num == 3:
             self.canvas.create_text(345, 205, text=f"{self.cmoves} moves left", tags="moves",font=20)
 
         self.canvas.bind("<Left>",self.leftGUI)

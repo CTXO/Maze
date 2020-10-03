@@ -108,8 +108,6 @@ def movement(maze_num):
         elif maze.found_exit:
             maze.won=True
 
-
-
         if maze.found_exit:
             if maze_num != 3:
                 clear()

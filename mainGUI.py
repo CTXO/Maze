@@ -6,6 +6,7 @@ from components import MazeGUI
 # Initializing first screen
 start_screen=Tk()
 start_screen.geometry("400x300+350+200")
+start_screen.title("Start")
 start_screen.configure()
 
 # Button methods
@@ -27,13 +28,13 @@ welcome.grid(row=0,column=0,columnspan=2,padx=55)
 inst_header=Label(start_screen,text="INSTRUCTIONS:",font=20)
 inst_header.grid(row=1,column=0,pady=(30,10),sticky='w')
 
-inst_1=Label(start_screen,text="-To go to the next level, head to the exit door(SS)")
+inst_1=Label(start_screen,text="-To go to the next level, head to the exit door")
 inst_1.grid(row=2,column=0,sticky=W)
 
 inst_2=Label(start_screen,text="-Do not go beyond the screen's limits")
 inst_2.grid(row=3,column=0,sticky=W)
 
-inst_3=Label(start_screen,text="-Do not hit the walls (X)")
+inst_3=Label(start_screen,text="-Do not hit the walls")
 inst_3.grid(row=4,column=0,sticky=W)
 
 inst_4=Label(start_screen,text="-Do not run out of moves")
@@ -52,6 +53,7 @@ if button_clicked:
     while True:
         easy_screen = Tk()
         easy_screen.geometry("400x335+500+200")
+        easy_screen.title("Level 1")
         easy_maze=MazeGUI(1, easy_screen)
         if easy_maze.found_exit:
             easy_maze.next_level=True
@@ -67,6 +69,7 @@ if button_clicked:
         while True:
             medium_screen = Tk()
             medium_screen.geometry("400x335+500+200")
+            medium_screen.title("Level 2")
             medium_maze = MazeGUI(2, medium_screen)
             if medium_maze.found_exit:
                 medium_maze.next_level = True
@@ -80,6 +83,7 @@ if button_clicked:
             while True:
                 hard_screen = Tk()
                 hard_screen.geometry("400x335+500+200")
+                hard_screen.title("Level 3")
                 hard_maze = MazeGUI(3, hard_screen)
                 if hard_maze.found_exit:
                     hard_maze.next_level = True

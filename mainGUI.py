@@ -48,15 +48,7 @@ start_screen.mainloop()
 # Going to second screen if button is pressed
 
 if button_clicked:
-   #  easy_screen=Tk()
-   #  easy_screen.geometry("400x330")
-   #
-   #
-   #
-   #  # Instantiating easy maze
-   #  easy_maze=MazeGUI(1,easy_screen)
-   #
-   # # easy_screen.mainloop()0
+
     while True:
         easy_screen = Tk()
         easy_screen.geometry("400x335+500+200")

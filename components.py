@@ -200,9 +200,6 @@ class MazeGUI(Maze):
     attempt = True
     close = False
     def tryAgain(self):
-        # self.cmaze = MazeGUI(self.maze_num, self.root)
-        # self.canvas.delete("ball")
-        # self.canvas.create_oval(self.canvas.coords(self.first_ball_tag), fill="red", tags="ball")
         self.root.destroy()
         self.attempt=True
 

@@ -38,62 +38,21 @@ def movement(maze_num):
         direction = input('\n')
 
         if direction == "w":
-
-            # if maze.moves == 0:
-            #     maze.out_of_moves = True
-            #
-            # elif maze.maze_2dlist[maze.index_list_w_ball-1][maze.index_ball_in_sublist] == "X":
-            #     maze.hit_wall = True
-            #
-            # elif maze.maze_2dlist[maze.index_list_w_ball-1][maze.index_ball_in_sublist] == "S":
-            #     maze.found_exit = True
-            #
-            # maze.moves -= 1
             try:
                 maze.up()
             except IndexError:
                 maze.hit_wall=True
 
         elif direction == "s":
-            # if maze.moves == 0:
-            #     maze.out_of_moves = True
-            #
-            # elif maze.maze_2dlist[maze.index_list_w_ball + 1][maze.index_ball_in_sublist] == "X":
-            #     maze.hit_wall = True
-            #
-            # elif maze.maze_2dlist[maze.index_list_w_ball + 1][maze.index_ball_in_sublist] == "S":
-            #     maze.found_exit = True
-            #
-            # maze.moves -= 1
             try:
                 maze.down()
             except IndexError:
                 maze.hit_wall = True
 
         elif direction == "a":
-            # if maze.moves == 0:
-            #     maze.out_of_moves = True
-            #
-            # elif maze.each_char[maze.ball_index-1] == "X" or maze.each_char[maze.ball_index-1]== '\n':
-            #     maze.hit_wall = True
-            #
-            # elif maze.each_char[maze.ball_index - 1] == "S":
-            #     maze.found_exit = True
-            #
-            # maze.moves -= 1
             maze.left()
 
         elif direction == "d":
-            # if maze.moves == 0:
-            #     maze.out_of_moves = True
-            #
-            # elif maze.each_char[maze.ball_index + 1] == "X" or maze.each_char[maze.ball_index-1]== '\n':
-            #     maze.hit_wall = True
-            #
-            # elif maze.each_char[maze.ball_index + 1] == "S":
-            #     maze.found_exit = True
-            #
-            # maze.moves -= 1
             maze.right()
 
         if maze.out_of_moves or maze.hit_wall:
@@ -142,6 +101,7 @@ while not easy_maze.won :
         movement(1)
     else:
         break
+    
 if easy_maze.keep_playing:
     movement(2)
     while not medium_maze.won:

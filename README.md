@@ -1,5 +1,5 @@
 # Maze Game
-Project done by me in high school to understand core concepts of programming
+Project done by me during high school to understand core concepts of programming
 
 ## Description
 Maze game is a simple game made with python and tkinter with 3 levels with a terminal version and a GUI version.
